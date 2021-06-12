@@ -1,0 +1,68 @@
+/* remove browser defaults */
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box; /* for using box model */
+}
+
+body {
+    font-family: "Merriweather", serif;
+    background-color: #ebf2ff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+
+}
+/* we are using the div tag to manipulate the h&w of image */
+
+.navbar__brand {
+    width: 100px;
+    padding: 1px;
+}
+.navbar__logo {
+    width: 100%;
+}
+
+.nav__item {
+    background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
+  color:#fff;
+  border: none;
+  padding : 12px;
+  border-radius: 6px;
+  cursor: pointer;
+
+}
+.nav__item:hover {
+    /* background-position: right center;  */
+    border: 2px solid blue;
+   
+}
+/* we have done mobile first approach, then
+we are moving to media query for tab an pc */
+/* tablet */
+@media(min-width:768px) {
+    .navbar {
+        justify-content: space-between;
+        padding :10px 30px;
+    }
+}
+/* laptop */
+@media(min-width:1020px) {
+    .navbar__brand {
+        width: 150px;
+        
+    }
+    .nav__item {
+        padding:20px;
+        font-size: 20px;
+    }
+}
